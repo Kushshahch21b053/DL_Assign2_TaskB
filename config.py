@@ -15,9 +15,9 @@ def get_config():
 
     # Configuration for training
     parser.add_argument('--batch_size', type=int, default=32, help='Batch size for training and evaluation')
-    parser.add_argument('--learning_rate', type=float, default=0.001, help='Learning rate for optimizer')
+    parser.add_argument('--learning_rate', type=float, default=0.0001, help='Learning rate for optimizer')
     parser.add_argument('--epochs', type=int, default=10, help='Number of training epochs')
-    parser.add_argument('--weight_decay', type=float, default=0.0001, help='Weight decay for regularization')
+    parser.add_argument('--weight_decay', type=float, default=0.001, help='Weight decay for regularization')
     parser.add_argument('--random_seed', type=int, default=42, help='Random seed for reproducibility')
 
     # Configuration for data directory location/path 
