@@ -21,7 +21,7 @@ https://api.wandb.ai/links/ch21b053-indian-institute-of-technology-madras/usnef6
 
 ### How to run code
 
-- Firstly, do:
+- Firstly, if needed, you can do:
 ```
 pip install -r requirements.txt
 ```
