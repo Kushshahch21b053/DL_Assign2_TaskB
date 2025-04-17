@@ -21,7 +21,9 @@ def get_config():
     parser.add_argument('--random_seed', type=int, default=42, help='Random seed for reproducibility')
 
     # Configuration for data directory location/path 
-    parser.add_argument('--data_dir', type=str, default='data/inaturalist', help='Directory containing the iNaturalist dataset') 
+    parser.add_argument('--data_dir', type=str, default='data/inaturalist_12k', help='Directory containing the iNaturalist dataset')
+    parser.add_argument('--plot_grid', action='store_true',
+                        help='Whether to plot a 10×3 grid of test images & predictions') 
 
     args = parser.parse_args()
     return args

@@ -78,8 +78,8 @@ def get_data_loaders(data_dir, batch_size=32, val_split=0.2):
     ])
 
     # Load the training dataset from a directory structured with sub-folders for each class
-    train_dataset = iNaturalistDataset(root=os.path.join(data_dir, 'train'), transform=transform)
-    test_dataset = iNaturalistDataset(root=os.path.join(data_dir, 'val'), transform=transform)
+    train_dataset = iNaturalistDataset(root_dir=os.path.join(data_dir, 'train'), transform=transform)
+    test_dataset = iNaturalistDataset(root_dir=os.path.join(data_dir, 'val'), transform=transform)
     
     # Split the training dataset into a training set and validation set
     val_size = int(len(train_dataset) * val_split)

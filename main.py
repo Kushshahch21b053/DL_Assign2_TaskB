@@ -34,7 +34,14 @@ def main():
                                  device=device)
     
     # Evaluate the model on the test set
-    evaluate_model(model, test_loader, device)
+    _ = evaluate_model(model, test_loader, device)
+
+    # Optionally, plot a grid of
+    if args.plot_grid:
+        from visualize import plot_prediction_grid
+        plot_prediction_grid(model, args.data_dir, device,
+                             samples_per_class=3,
+                             figsize_per_image=2)
 
 if __name__ == "__main__":
     main()
